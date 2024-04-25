@@ -3,47 +3,18 @@
 @section('title', 'Villas Las Acacias')
 
 @section('content_header')
-    <h1>Sistema Contable</h1>
 @stop
 
 @section('content')
-     <!--Contenido-->
-<div class="p-3">    
-    <!-- Información de Transacciones -->
-    <h2>Últimas Transacciones</h2>
-    <!-- Botón para agregar nueva transacción -->
-    <button class="btn btn-primary mb-3">Agregar Transacción</button>
     
-    <!-- Alerta para mostrar mensajes importantes -->
-    <div class="alert alert-info" role="alert">
-      ¡Atención! Recuerda mantener actualizado tu registro de transacciones.
+<div class="container">
+    <div class="row">
+      <div class="col mt-5">
+        <h1 class="display-4">¡Bienvenido!</h1>
+        <p class="lead">¡Hola! Somos el equipo fundador de Digital Solution, estudiantes de la Universidad Autónoma Nacional de Honduras (UNAH), desarrolladores de software dedicados a proporcionar soluciones digitales personalizadas para satisfacer las necesidades de nuestros clientes. Nos especializamos en el diseño y desarrollo de sistemas de facturación, gestión de inventario, aplicaciones web y más, utilizando las últimas tecnologías para ofrecer resultados de calidad.</p>
+      </div>
     </div>
-    
-    <!-- Tabla de Transacciones -->
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Fecha</th>
-          <th>Descripción</th>
-          <th>Monto</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- Aquí irían las últimas transacciones -->
-        <tr>
-          <td>2024-04-10</td>
-          <td>Compra de suministros</td>
-          <td>$3000</td>
-        </tr>
-        <tr>
-          <td>2024-04-09</td>
-          <td>Venta de productos</td>
-          <td>$8000</td>
-        </tr>
-        <!-- Agrega más filas según sea necesario -->
-      </tbody>
-    </table>
-
+  </div>
   
 
 @stop

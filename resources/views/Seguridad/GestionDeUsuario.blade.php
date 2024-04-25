@@ -23,7 +23,7 @@
              <!-- Button trigger modal -->
             <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#Nuevo_Usuario">Nuevo</button>
         <hr>
-        {{-- <div class="container-fluid mt-2"> --}}
+      <div class="table-responsive"> 
         <table  id="g_usuario" class="table table-striped" style="width:100%" >
             <thead>
                 <tr>
@@ -270,7 +270,7 @@
                 </tr>
             </tfoot>
             </table> 
-        {{-- </div> --}}
+        </div>
     {{-- </div> --}}
 
   

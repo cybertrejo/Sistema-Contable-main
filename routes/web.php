@@ -21,6 +21,11 @@ Route::middleware('auth')->group(function () {
 //RUTAS DE INFORME FINANCIERO
 Route::get('InformeI',[GraficoController::class, 'index']);
 
+Route::get('/BGeneral', function () {
+    return view('InformeFinanciero.BalanceG');
+   });
+
+
 //SEGURIDAD
 
 //gestion de usuario
@@ -40,6 +45,43 @@ Route::get('/ParametroPermiso', function () {
     return view('Seguridad.Permiso');
    });
 
+//CONTABILIDAD
+
+//Transacciones
+Route::get('/Transacciones', function () {
+    return view('Contabilidad.RegistroTransacciones');
+   });
+
+//Pago De Residente
+Route::get('/PagoResidente', function () {
+    return view('Contabilidad.PagoResidente');
+   });
+
+   //Pago De Residente
+Route::get('/CuentasPorCobrar', function () {
+    return view('Contabilidad.CuentasXCobrar');
+   });
+
+      //Ciere Contable
+Route::get('/CierreContable', function () {
+    return view('Contabilidad.CierreContable');
+   });
+
+
+   //AYUDA Y SOPORTE
+   Route::get('/Soporte', function () {
+    return view('AyudaSoporte.Soporte');
+   });
+    
+//MANTENIMIENTO
+Route::get('/Residente', function () {
+    return view('Mantenimiento.Residente');
+   });
+
+   //ADMINISTRACION
+Route::get('/GestionDeBaseDeDatos', function () {
+    return view('Administracion.GestionBD');
+   });
 
 
 

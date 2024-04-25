@@ -110,16 +110,16 @@ return [
     */
 
     'preloader' => [
-        'enabled' => true,
-        'mode' => 'fullscreen',
-        'img' => [
-            'path' => 'vendor/adminlte/dist/img/logo2.png',
-            'alt' => 'AdminLTE Preloader Image',
-            'effect' => 'animation__shake',
-            'width' => 60,
-            'height' => 60,
-        ],
-    ],
+       'enabled' => false,
+    'mode' => 'fullscreen',
+      'img' => [
+        'path' => 'vendor/adminlte/dist/img/logo2.png',
+        'alt' => 'AdminLTE Preloader Image',
+        'effect' => 'animation__shake',
+        'width' => 60,
+         'height' => 60,
+       ],
+   ],
 
     /*
     |--------------------------------------------------------------------------
@@ -339,7 +339,7 @@ return [
                     'text' => 'Gestion de base de Datos',
                     'icon' => 'fas fa-fw fa-sharp fa-light fa-fingerprint',
                     'icon_color' => 'teal',
-                    'url' => '#',
+                    'url' => 'GestionDeBaseDeDatos',
                 ],
                 [
                     'text' => 'Bitacora',
@@ -362,18 +362,12 @@ return [
                 ],
                 
                 [
-                    'text' => 'Balance General',
+                    'text' => 'Estados Financieros',
                     'icon' => 'fas fa-fw fa-sharp fa-light fa-bolt',
                     'icon_color' => 'teal',
-                    'url' => '#',
+                    'url' => 'BGeneral',
                 ],
-                [
-                    'text' => 'Estado de resultado',
-                    'icon' => 'fas fa-fw fa-sharp fa-light fa-bolt',
-                    'icon_color' => 'teal',
-                    'url' => '#',
-                ],
-                 
+         
                       
             ],
             
@@ -387,39 +381,39 @@ return [
                     'text' => 'Registro de Transacciones',
                     'icon' => 'fas fa-fw fa-sharp fa-light fa-check',
                     'icon_color' => 'teal',
-                    'url' => '#',
+                    'url' => 'Transacciones',
                 ],
                 
                 [
                     'text' => 'Pago de Residentes',
                     'icon' => 'fas fa-fw fa-sharp fa-light fa-check',
                     'icon_color' => 'teal',
-                    'url' => '#',
+                    'url' => 'PagoResidente',
                 ],
                 [
                     'text' => 'Cuentas po cobrar',
                     'icon' => 'fas fa-fw fa-sharp fa-light fa-check',
                     'icon_color' => 'teal',
-                    'url' => '#',
+                    'url' => 'CuentasPorCobrar',
                 ],    
                 [
                     'text' => 'Cierre contable',
                     'icon' => 'fas fa-fw fa-sharp fa-light fa-check',
                     'icon_color' => 'teal',
-                    'url' => '#',
+                    'url' => 'CierreContable',
                 ],          
             ],
             
         ],
         [
             'text' => 'Mantenimiento',
-            'icon' => 'fas fa-fw fa-sharp fa-light fa-arrow-right',
+            'icon' => 'fas fa-fw fa-sharp fa-ligh fa fa-cogs',
             'submenu' => [
                 [
                     'text' => 'Residente',
                     'icon' => 'fas fa-fw fa-sharp fa-light fa-pen',
                     'icon_color' => 'teal',
-                    'url' => '#',
+                    'url' => 'Residente',
                 ],
                 
                 [
@@ -531,22 +525,14 @@ return [
             ],
         ],
 
-        ['header' => 'Ayuda y soporte'],
+        // ['header' => 'Ayuda y soporte'],
         [
-            'text' => 'Preguntas Frecuentes',
-            'icon_color' => 'green',
-            'url' => '#',
+            'text' => 'Ayuda Y Soporte',
+            'icon' => 'fas fa-fw fa-sharp fa-ligh fa fa-question-circle',
+            'url' => 'Soporte',
+            
         ],
-        [
-            'text' => 'Documentacion',
-            'icon_color' => 'yellow',
-            'url' => '#',
-        ],
-        [
-            'text' => 'Contacto Soporte',
-            'icon_color' => 'cyan',
-            'url' => '#',
-        ],
+      
     ],
 
     /*
