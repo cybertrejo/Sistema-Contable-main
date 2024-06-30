@@ -381,7 +381,7 @@ return [
                     'text' => 'Registro de Transacciones',
                     'icon' => 'fas fa-fw fa-sharp fa-light fa-check',
                     'icon_color' => 'teal',
-                    'url' => 'Transacciones',
+                    'url' => '/transacciones/create',
                 ],
                 
                 [
@@ -436,36 +436,36 @@ return [
                     'url' => '#',
                 ],
                 [
-                    'text' => 'Tipo de cuenta',
+                    'text' => 'Cuentas',
                     'icon' => 'fas fa-fw fa-sharp fa-light fa-pen',
                     'icon_color' => 'teal',
-                    'url' => '#',
+                    'url' => '/Cuentas',
                 ],
                 
                 [
                     'text' => 'Catalogo de cuenta',
                     'icon' => 'fas fa-fw fa-sharp fa-light fa-pen',
                     'icon_color' => 'teal',
-                    'url' => '#',
+                    'url' => '/CatalogoCuentas',
                 ],
                 [
-                    'text' => 'Libro Diario',
+                    'text' => 'Sub-Cuentas',
                     'icon' => 'fas fa-fw fa-sharp fa-light fa-pen',
                     'icon_color' => 'teal',
-                    'url' => '#',
+                    'url' => '/subcuentas',
                 ],
                 
                 [
-                    'text' => 'Libro Mayor',
+                    'text' => 'Sub-SubCuentas',
                     'icon' => 'fas fa-fw fa-sharp fa-light fa-pen',
                     'icon_color' => 'teal',
-                    'url' => '#',
+                    'url' => '/sub-subcuentas',
                 ],
                 [
-                    'text' => 'Informe Financiero',
+                    'text' => 'Tipo de Asientos',
                     'icon' => 'fas fa-fw fa-sharp fa-light fa-pen',
                     'icon_color' => 'teal',
-                    'url' => '#',
+                    'url' => '/tipos-asiento',
                 ],
                 
                 [

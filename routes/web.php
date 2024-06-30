@@ -2,7 +2,15 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Database\Eloquent\Model;
 use App\Http\Controllers\GraficoController;
+use App\Http\Controllers\CatalogoController;
+use App\Http\Controllers\CuentaController;
+use App\Http\Controllers\SubCuentaController;
+use App\Http\Controllers\SubSubCuentaController;
+use App\Http\Controllers\TipoAsientoController;
+
+use App\Http\Controllers\TransaccionController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -17,6 +25,31 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+
+// RUTAS CONTABILIDAD
+
+// Ruta para seleccionar Catalogo de cuenta
+Route::get('/CatalogoCuentas', [CatalogoController::class, 'index'])->name('catalogocuenta.index');
+
+// Ruta para seleccionar cuenta
+Route::get('/Cuentas', [CuentaController::class, 'index'])->name('cuenta.index');
+
+// Ruta para seleccionar SUBcuenta
+Route::get('/subcuentas', [SubCuentaController::class, 'index'])->name('subcuenta.index');
+
+// Ruta para seleccionar SUB-SUBCuenta
+Route::get('/sub-subcuentas', [SubSubCuentaController::class, 'index'])->name('sub-subcuenta.index');
+
+// Ruta para seleccionar TIÓ DE ASIENTO
+Route::get('/tipos-asiento', [TipoAsientoController::class, 'index'])->name('tipoasiento.index');
+
+//REGISTAR TRANSACCION
+Route::get('/transacciones/create', [TransaccionController::class, 'create'])->name('transacciones.create');
+Route::post('/transacciones/store', [TransaccionController::class, 'store'])->name('transacciones.store');
+
+
+/*
 
 //RUTAS DE INFORME FINANCIERO
 Route::get('InformeI',[GraficoController::class, 'index']);
@@ -46,8 +79,37 @@ Route::get('/ParametroPermiso', function () {
    });
 
 //CONTABILIDAD
-
 //Transacciones
+
+Route::get('/transacciones/nueva', [TransaccionController::class, 'mostrarFormulario'])->name('transacciones.nueva');
+Route::post('/guardar-transaccion', [TransaccionController::class, 'registrarTransaccion'])->name('guardar.transaccion');
+
+
+Route::get('/subcuentas/{cuentaId}', [TransaccionController::class, 'obtenerSubcuentas']);
+Route::get('/sub-subcuentas/{subcuentaId}', [TransaccionController::class, 'obtenerSubSubcuentas']);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Route::get('/Transacciones', function () {
     return view('Contabilidad.RegistroTransacciones');
    });
@@ -84,5 +146,5 @@ Route::get('/GestionDeBaseDeDatos', function () {
    });
 
 
-
+*/
 require __DIR__.'/auth.php';
