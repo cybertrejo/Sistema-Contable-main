@@ -26,6 +26,14 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::get('/admin', function () {
+    //
+})->middleware('auth', 'App\Http\Middleware\CheckAdmin');
+
+Route::group(['middleware' => ['auth', 'role:admin']], function () {
+    Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
+});
+
 
 // RUTAS CONTABILIDAD
 
