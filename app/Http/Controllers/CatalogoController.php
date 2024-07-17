@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class CatalogoController extends Controller
 {
      // Define la URL base de la API como una propiedad de instancia
-     private $serverapi = 'http://localhost:3001';
+     private $serverapi = 'http://localhost:3000';
 
      /**
       * Muestra una lista de productos obtenidas de la API.
